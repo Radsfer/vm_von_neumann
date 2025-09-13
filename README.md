@@ -1,22 +1,6 @@
-# Guia Completo: Instalando Docker e Dev Containers com WSL no Windows Home
-
-  
-
-Este guia irá ajudá-lo a configurar um ambiente de desenvolvimento moderno e isolado no seu Windows Home, usando o poder do Linux através do WSL 2, junto com o Docker e a integração com o Visual Studio Code.
-
-  
-
----
-
-  
-
 ### Pré-requisitos
 
-  
-
 Antes de começar, verifique se seu sistema atende a estes dois requisitos essenciais:
-
-  
 
 1.  **Versão do Windows:** Você precisa do Windows 10 (versão 2004 ou mais recente) ou qualquer versão do Windows 11.
 
@@ -34,12 +18,7 @@ Antes de começar, verifique se seu sistema atende a estes dois requisitos essen
 
   **Se estiver desabilitado, você precisará reiniciar o computador, entrar na BIOS/UEFI (geralmente pressionando F2, F10 ou Del durante a inicialização) e ativar a opção (pode ter nomes como "Intel VT-x", "AMD-V" ou "SVM Mode").**
 
-  
-
 ---
-
-  
-
 ### Passo 1: Instalar o WSL (Subsistema do Windows para Linux)
 
 1.  **Abra o PowerShell como Administrador:**
@@ -59,15 +38,12 @@ Antes de começar, verifique se seu sistema atende a estes dois requisitos essen
 
 6.  **Instale o Ubuntu:**
 
-      ```powershell
-
-     wsl --install -d Ubuntu
-
-     ```
+```powershell
+  wsl --install -d Ubuntu
+```
   
 
 4.  **Configure o Ubuntu:**
-
     Após a instalação procure por Ubuntu no menu iniciar (Pode ser que não seja a mesma versão da image) e clique. Você precisará  configurar rapidamente, será pedido para você criar um **nome de usuário** e uma **senha** para o seu ambiente Linux. 
 
 ---
@@ -84,57 +60,39 @@ Antes de começar, verifique se seu sistema atende a estes dois requisitos essen
   
 
 1.  **Habilitar a funcionalidade "Subsistema do Windows para Linux":**
-
-   ```powershell
-   dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart     
-   ```
+```powershell
+dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart     
+```
 
   
 
 2.  **Habilitar a funcionalidade "Plataforma de Máquina Virtual":**
-
-     ```powershell
-
-   dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
-
-   ```
-
-  
+```powershell
+dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
+```
 
 3.  **Reinicie o computador.**
-
-  
 
 4.  **Baixe e instale o pacote de atualização do kernel do Linux:**
 
    * [Clique aqui para baixar o pacote do site da Microsoft](https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi). Execute o instalador baixado.
 
-  
 
 5.  **Definir o WSL 2 como padrão:**
-
-     ```powershell
-
-     wsl --set-default-version 2
-
-     ```
-
-  
+```powershell
+wsl --set-default-version 2
+```
 
 6.  **Instale o Ubuntu:**
-
-      ```powershell
-
-     wsl --install -d Ubuntu
-
-     ```
-
+```powershell
+wsl --install -d Ubuntu
+```
   
 4.  **Configure o Ubuntu:**
-
     Após a instalação procure por Ubuntu no menu iniciar e clique. Você precisará  configurar rapidamente, será pedido para você criar um **nome de usuário** e uma **senha** para o seu ambiente Linux.
-
+    
 ---
+
 ### Passo 2: Instalar o Docker Desktop
   1.  **Baixe o Instalador:**
     * Vá para o site oficial: [**docker.com/products/docker-desktop/**](https://www.docker.com/products/docker-desktop/)
@@ -153,26 +111,20 @@ Antes de começar, verifique se seu sistema atende a estes dois requisitos essen
     * Certifique-se de que o interruptor para a sua distribuição ("Ubuntu") esteja **ligado**.
 
     * Clique em **"Apply & Restart"**.
-
-  
-
+    
 ---
-
   
-
 ### Passo 3: Instalar e Configurar o Visual Studio Code
 
 1.  **Instale a Extensão Dev Containers:**
     * No VS Code, vá para a aba de **Extensões** (`Ctrl + Shift + X`).
 
     * Procure por `Dev Containers` e instale a extensão da Microsoft.
-
   
-
 ---
 ### Passo 4: Testando Tudo!
 
-1.  Clone o repositório de teste
+1.  Clone o repositório.
 
 2.  Clique em **"Reopen in Container"** quando o aviso aparecer, aguarde pois estárá sendo feito o download de todas as dependenciais necessárias do container. 
 
