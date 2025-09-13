@@ -48,12 +48,9 @@ Antes de começar, verifique se seu sistema atende a estes dois requisitos essen
 2.  **Execute o Comando de Instalação:**
 
     * Na janela do PowerShell, digite o seguinte comando e pressione Enter:
-
-        ```powershell
-
-        wsl --install
-
-        ```
+```powershell
+ wsl --install
+```
 
 
 3.  **Reinicie o Computador:**
