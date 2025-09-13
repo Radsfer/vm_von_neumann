@@ -1,4 +1,4 @@
-### Pré-requisitos
+### Instalando e configurando o Dev Containers no Windows
 
 Antes de começar, verifique se seu sistema atende a estes dois requisitos essenciais:
 
@@ -79,7 +79,7 @@ dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /nores
 
 4.  **Baixe e instale o pacote de atualização do kernel do Linux:**
 
-   * [Clique aqui para baixar o pacote do site da Microsoft](https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi). Execute o instalador baixado.
+   - [Clique aqui para baixar o pacote do site da Microsoft](https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi). Execute o instalador baixado.
 
 
 5.  **Definir o WSL 2 como padrão:**
@@ -99,22 +99,23 @@ wsl --install -d Ubuntu
 
 ### Passo 2: Instalar o Docker Desktop
   1.  **Baixe o Instalador:**
-    * Vá para o site oficial: [**docker.com/products/docker-desktop/**](https://www.docker.com/products/docker-desktop/)
+    - Vá para o site oficial: [**docker.com/products/docker-desktop/**](https://www.docker.com/products/docker-desktop/)
 
 2.  **Execute o Instalador:**
-    * Durante a instalação, certifique-se de que a opção **"Use WSL 2 instead of Hyper-V (recommended)"** esteja marcada.
+
+    - Durante a instalação, certifique-se de que a opção **"Use WSL 2 instead of Hyper-V (recommended)"** esteja marcada.
 
 3.  **Inicie e Configure o Docker Desktop:**
 
-    * Após a instalação, inicie o Docker Desktop.
+    - Após a instalação, inicie o Docker Desktop.
     
-    * Faça um registro rápido na plataforma docker hub
+    - Faça um registro rápido na plataforma docker hub
 
-    * Vá em **Settings > Resources > WSL Integration**.
+    - Vá em **Settings > Resources > WSL Integration**.
 
-    * Certifique-se de que o interruptor para a sua distribuição ("Ubuntu") esteja **ligado**.
+    - Certifique-se de que o interruptor para a sua distribuição ("Ubuntu") esteja **ligado**.
 
-    * Clique em **"Apply & Restart"**.
+    - Clique em **"Apply & Restart"**.
 
 ![Docker](imgs/docker.png)
 
@@ -123,9 +124,10 @@ wsl --install -d Ubuntu
 ### Passo 3: Instalar e Configurar o Visual Studio Code
 
 1.  **Instale a Extensão Dev Containers:**
-    * No VS Code, vá para a aba de **Extensões** (`Ctrl + Shift + X`).
 
-    * Procure por `Dev Containers` e instale a extensão da Microsoft.
+    - No VS Code, vá para a aba de **Extensões** (`Ctrl + Shift + X`).
+
+    - Procure por `Dev Containers` e instale a extensão da Microsoft.
   
 ---
 ### Passo 4: Testando Tudo!
